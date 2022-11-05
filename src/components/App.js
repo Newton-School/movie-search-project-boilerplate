@@ -6,22 +6,9 @@ const App = () => {
     const [inputValue, setInputValue] = useState("");
     const [results, setResult] = useState(null);
 
-    function handleClick(e) {
-        e.preventDefault();
-        let matchingMovies = [];
-        for (let movie of movies) {
-            if (movie.title.toLowerCase() == inputValue.toLowerCase()) {
-                matchingMovies.push(movie.title);
-            }
-        }
-        console.log(matchingMovies);
-        setResult(matchingMovies);
-        setInputValue("");
-    }
+    function handleClick(e) {}
 
-    function handleChange(e) {
-        setInputValue(e.target.value);
-    }
+    function handleChange(e) {}
 
     return <div id="main"></div>;
 };
