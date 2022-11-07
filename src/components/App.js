@@ -10,7 +10,27 @@ const App = () => {
 
     function handleChange(e) {}
 
-    return <div id="main"></div>;
+    return (
+        <div id="main">
+            <form id="form">
+                <input
+                    type="text"
+                    onChange={handleChange}
+                    value={inputValue}
+                    id="movie-input"
+                ></input>
+                <button id="button" onClick={handleClick}>
+                    Search
+                </button>
+            </form>
+            <div id="result">
+                {results &&
+                    results.map((movie) => (
+                        <div className="movie">{movie}</div>
+                    ))}
+            </div>
+        </div>
+    );
 };
 
 export default App;
